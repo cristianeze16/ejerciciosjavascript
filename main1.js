@@ -211,4 +211,4 @@ if (intentos > limiteIntentos) {
 if(intentos > limiteIntentos){
  numeroIngresado = prompt("ingrese un numero del 1 al 10 quedan" +" "+ intentos );
 
-}
+} 
