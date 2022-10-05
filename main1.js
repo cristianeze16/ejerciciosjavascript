@@ -181,34 +181,171 @@
 // }
 
 //* 8.	Realizar un juego de adivinanza estableciendo un valor entre 1 y 10 en una variable llamada numeroIncognita y que permita en 3 intentos adivinar el numero. El usuario deberá ingresar un numero del 1 al 10 por pantalla en 3 intentos el cual se deberá guardar en una variable llamada numeroIngresado, y en cada intento deberás mostrarle un mensaje al usuario diciendo: “el numero ingresado es mayor, vuelve a intentarlo” o “el numero ingresado es menor, vuelve a intentarlo” o en caso de adivinar, un mensaje que diga: “Ganaste, haz adivinado el numero.” No te preocupes si usas mucho código repetido, mas adelante veraz como realizar este juego de manera mas eficiente.
-let limiteAlto = 10;
-let limiteBajo = 1;
-let limiteIntentos = 3;
-let intentos = 1;
-let numeroIngresado = prompt("ingrese un numero del 1 al 10");
-let numeroIncognita = Math.floor(
-  Math.random() * (limiteAlto - limiteBajo) + limiteBajo
-);
-console.log(numeroIncognita);
 
-if (numeroIngresado != numeroIncognita) {
-  console.log("Intente nuevamente");
-  intentos++;
+// let limiteAlto = 10;
+// let limiteBajo = 1;
+// let limiteIntentos = 3;
+// let numeroIngresado;
+// let elUsuarioGano = false;
+// let numeroIncognita = Math.floor(
+//   Math.random() * (limiteAlto - limiteBajo) + limiteBajo
+// );
 
-}
-if (numeroIngresado > numeroIncognita) {
-  console.log("el numero es menor");
-} else if (numeroIngresado < numeroIncognita) {
-  console.log("el numero es mayor ");
-}
-if (numeroIngresado === numeroIncognita) {
-  console.log("Ganaste, haz adivinado el numero");
-}
-if (intentos > limiteIntentos) {
-  console.log("Game Over el numero era" + " " + numeroIncognita);
-}
+// for (i = 0; i < limiteIntentos; i++) {
+//   console.log(numeroIncognita);
+//   numeroIngresado = Number(
+//     prompt(
+//       `ingrese un numero del 1 al 10 quedan ${limiteIntentos - i} intentos`
+//     )
+//   );
+//   if (numeroIngresado == numeroIncognita) {
+//     alert("Si adivinaste!");
+//     elUsuarioGano = true;
+//     break;
+//   }
 
-if(intentos > limiteIntentos){
- numeroIngresado = prompt("ingrese un numero del 1 al 10 quedan" +" "+ intentos );
+// }
+// if(elUsuarioGano == false){
+//  alert(`GAME OVER el numero era: ${numeroIncognita}`);
+//  console.log(`GAME OVER el numero era: ${numeroIncognita}`);
+// }
 
-} 
+//* 9.	Crear un programa que permita ingresar tu edad y decir si eres un infante (0 a 12 años), adolescente(13 a 18 años), un mayor joven (19 a 45 años) o un anciano (mas de 45 años), y en caso de ingresar una edad mayor a 100 mostrar un mensaje preguntando si en realidad tiene esa edad
+
+// edadUsuario = Number(prompt("Ingrese su edad"));
+// if (edadUsuario <= 12) {
+//   alert("Usted es un infante");
+// } else if (edadUsuario > 13 && edadUsuario <= 18) {
+//   alert("Usted es un adolescente");
+// } else if (edadUsuario > 19 && edadUsuario <= 45) {
+//   alert("Usted es un mayor joven");
+// } else if (edadUsuario > 45 && edadUsuario <= 100) {
+//   alert("Usted es un anciano");
+// } else if (edadUsuario > 100) {
+//   alert("¿Usted esta seguro de tiene esa edad?");
+// }
+
+//* 10.	Crear un programa que permita el ingreso de “PIEDRA”, “PAPEL” o “TIJERAS” a 2 jugadores y muestre en pantalla cual de los 2 ha ganado o si han empatado. En caso de algún ingreso incorrecto mostrar por pantalla que uno de los jugadores ha hecho trampa.
+
+// let jugador1 = prompt(" Jugador 1 : Ingrese piedra papel o tijera");
+// let jugador2 = prompt("Jugador 2: Ingrese piedra papel o tijera");
+// jugador1Ok = false;
+// jugador2Ok = false;
+
+// if (jugador1 === "tijera") {
+//   jugador1Ok = true;
+// } else if (jugador1 === "piedra") {
+//   jugador1Ok = true;
+// } else if (jugador1 === "papel") {
+//   jugador1Ok = true;
+// } else {
+//   jugador1Ok = false;
+// }
+
+// if (jugador2 === "tijera") {
+//   jugador2Ok = true;
+// } else if (jugador2 === "piedra") {
+//   jugador2Ok = true;
+// } else if (jugador2 === "papel") {
+//   jugador2Ok = true;
+// } else {
+//   jugador2Ok = false;
+// }
+
+// // console.log(jugador1Ok,jugador2Ok);
+
+// if (jugador1Ok && jugador2Ok) {
+//   // console.log(jugador1Ok, jugador2Ok);
+
+//   if (jugador1 === jugador2) {
+//     alert("Empatado");
+//   } else if (jugador1 === "papel" && jugador2 === "piedra") {
+//     alert("gano el jugador 1");
+//   } else if (jugador1 === "papel" && jugador2 === "tijera") {
+//     alert("gano el jugador 2");
+//   } else if (jugador1 === "piedra" && jugador2 === "tijera") {
+//     alert("gano el jugador 1");
+//   } else if (jugador1 === "piedra" && jugador2 === "papel") {
+//     alert("gano el jugador 1");
+//   } else if (jugador2 === "papel" && jugador1 === "piedra") {
+//     alert("gano el jugador 2");
+//   } else if (jugador1 === "tijera" && jugador2 === "piedra") {
+//     alert("gano el jugador 2");
+//   } else if (jugador1 === "tijera" && jugador2 === "papel") {
+//     alert("gano el jugador 1");
+//   }
+// }
+//* 11.	Realizar un programa que permita el ingreso de un color y utilizando “switch” mostrar por pantalla los siguientes mensajes según las opciones: Blanco o Negro: Falta de color, Verde: El color de la naturaleza, Azul: El color del agua, Amarillo: El color del sol, Rojo: El color del fuego, Marrón: el color de la tierra, y para cualquier otro valor: Excelente elección, no lo teníamos pensado.
+
+// let colorUsuario = prompt("Ingrese un color");
+
+// switch (colorUsuario) {
+//   case "blanco":
+//     alert("falta de color");
+
+//     break;
+//   case "negro":
+//     alert("falta de color");
+
+//     break;
+//   case "verde":
+//     alert("El color de la naturaleza");
+
+//     break;
+//   case "azul":
+//     alert("El color del agua");
+
+//     break;
+//   case "amarillo":
+//     alert("El color del sol");
+
+//     break;
+//   case "rojo":
+//     alert("El color del fuego");
+
+//     break;
+//  case "marron":
+//     alert("El color de la tierra");
+
+//     break;
+
+//   default: alert("Excelente eleccion no lo teniamos pensado");
+//     break;
+// }
+
+//* 12.	Realizar un programa que permita el ingreso de 2 valores numéricos y una operación. Según sea la operación ingresada (suma, resta, multiplicación, división) el programa deberá mostrar en pantalla un mensaje junto con el resultado. En caso de haber elegido división realizar la operación siempre que sea posible o mostrar un mensaje de ERROR si el divisor ingresado fue 0.
+
+
+// let numeroA = Number(prompt("Ingrese un numero A"));
+// let operacion = prompt("Ingrese la operacion a realizar");
+// let numeroB = Number(prompt("Ingrese un numero B"));
+// let resultado = 0;
+// switch (operacion) {
+//   case "+":
+//     resultado = numeroA + numeroB;
+//     alert(`el resultado es:  ${resultado}`);
+//     break;
+//   case "-":
+//     resultado = numeroA - numeroB;
+//     alert(`el resultado es:  ${resultado}`);
+//     break;
+//   case "*":
+//     resultado = numeroA * numeroB;
+//   alert(`el resultado es:  ${resultado}`);
+//     break
+//   case "/":
+//     if(numeroB == 0) {
+//       alert("Error no se puede dividir por cero");
+//       break;
+//     }
+//     resultado = numeroA / numeroB;
+//     alert(`el resultado es: ${resultado}`);
+//     break;
+//     default:
+//       alert("Ingrese una operación valida");
+//     break;
+// }
+
+//* 13.	Crear un programa que permita ingresar todos los datos de tu documento nacional de identidad, mostrar por pantalla un mensaje que imprima todos los datos ingresados y pregunte si están correctos los mismos. En caso afirmativo, crear un objeto llamado dni con todos los datos ingresados y mostrarlos por consola con console.table() mas un mensaje de registro exitoso, en caso de que la persona rechace confirmar los datos, mostrar un mensaje que diga: vuelva a intentarlo en 1 mes.
+
+
